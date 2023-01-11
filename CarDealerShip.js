@@ -51,39 +51,23 @@ return ManufacturerArray;
 
 
 //Add a car to stock
-
 CarDealership.prototype.addCarToCarDealership = function (car){
 return this.inStock.push(car);
     }
 
+//shows an array of manufacturers
 CarDealership.prototype.arrayOfManufacturers = function(){
     return this.inStock.map((car) => {return car.inputName});
 }
 
-//Find from specific manufacturer
-CarDealership.prototype.findFromSpecificManufacturer = function(inputName){
-    return this.newStock.filter(Car=>  Car.inputName == inputName);
-
-    
-    //  .this.inStock.filter((Car)=> {return Car.inputName === inputName})
-    // .filter((car) => {return car.inputName=== inputName});
-}
-
+//find cars by specific manufacturer
 CarDealership.prototype.findAllcarByManufacturerSpecific = function (inputname)  {
     return this.inStock.filter(inStock => inStock.inputName == inputname );
   };
 
-// //find all cars from brand name
-// CarDealership.prototype.carsFromBrand = function(name){
-//         return this.inStock.filter(carsInStock =>
-//             carsInStock.name)
-//     };
 
-
-// filter search for cars total car value.
-
+//finds the total car Value
 CarDealership.prototype.totalCarValue = function(){
-
 const initCarValue = 0;
         const priceOfCar = this.inStock.map(inStock => inStock.inputCost);
 

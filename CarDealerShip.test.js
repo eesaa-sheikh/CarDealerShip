@@ -74,3 +74,12 @@ test("check Car Price", () => {
 
     });
     
+    test("check Car Price for £0", () => {
+
+        let newCarDealer = new CarDealerShip("Eesaa's dealer Wheels", 0, []);
+        
+        const actual = newCarDealer.totalCarValue();
+        const expected = 0; 
+        expect(actual).toBe(expected);
+    
+        });
