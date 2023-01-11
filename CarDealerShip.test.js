@@ -41,9 +41,7 @@ test("return an array of cars by manufacturer", () => {
     });
 
 
-    
-
-test("check that manufacutring names can show all cars", () => {
+test("check that manufacturing names can show all cars", () => {
 
 let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
 
@@ -52,6 +50,16 @@ let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyot
     expect(actual).toStrictEqual(expected);
 
 });
+
+test("check that manufacutring names shown no cars in stack", () => {
+
+    let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
+    
+         actual = dealerWheels.findAllcarByManufacturerSpecific("Mustange").length; ;
+        expected = 0;
+        expect(actual).toStrictEqual(expected);
+    
+    });
 
 test("check Car Price of all in stock", () => {
 
