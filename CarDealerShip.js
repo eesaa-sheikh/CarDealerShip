@@ -34,37 +34,21 @@ CarDealership.prototype.carsInStock = function(){
     return this.inStock.length;
 }
 
-
-//Return an array containing each car's manufacturer
-
-CarDealership.prototype.nameOfCarManufacturer  = function () {
-
-    let ManufacturerArray= []; 
-    let newStock = this.carsInStock;
-  
-   for(item in newStock){
-    ManufacturerArray.push(newStock[item].inputName);
-   } 
-return ManufacturerArray;
-
-};
-
-
 //Add a car to stock
 CarDealership.prototype.addCarToCarDealership = function (car){
 return this.inStock.push(car);
     }
 
-//shows an array of manufacturers
+//return an array of manufacturers
 CarDealership.prototype.arrayOfManufacturers = function(){
     return this.inStock.map((car) => {return car.inputName});
 }
+
 
 //find cars by specific manufacturer
 CarDealership.prototype.findAllcarByManufacturerSpecific = function (inputname)  {
     return this.inStock.filter(inStock => inStock.inputName == inputname );
   };
-
 
 //finds the total car Value
 CarDealership.prototype.totalCarValue = function(){
