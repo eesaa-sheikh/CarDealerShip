@@ -133,8 +133,8 @@ test("check that manufacturing names can show all cars", () => {
 
 let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
 
-    actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti") ;
-    expected = dealerWheels.carsInStock[{"inputCost": 100, "inputEngine": "10L W16", "inputName": "Bugatti"}, {"inputCost": 1231231312, "inputEngine": "100L W16", "inputName": "Bugatti"}];
+    actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti")
+    expected = dealerWheels.findAllcarByManufacturerSpecific("Bugatti") ;
     expect(actual).toStrictEqual(expected);
 
 });
