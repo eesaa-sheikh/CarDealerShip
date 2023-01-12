@@ -113,16 +113,6 @@ test("return an acs array of cars by price", () => {
 
 });
 
-// test("return an array of cars by price ascending", () => {
-//     let messiGarage = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8")])
-    
-//     const actual = messiGarage.carsInPrice();
-//     const expected = [ {"inputCost":100,"inputEngine":"3L V8", "inputName": "Toyota"} ];
-
-//     expect(actual).toStrictEqual(expected);
-
-// });
-
 
 
 

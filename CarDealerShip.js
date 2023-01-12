@@ -69,6 +69,11 @@ CarDealership.prototype.arrayOfManufacturers = function(){
     return this.inStock.map((car) => {return car.inputName});
 }
 
+//return an array of manufacturers
+CarDealership.prototype.arrayOfManufacturersTest = function(){
+    return this.inStock.map((car) => {return car});
+}
+
 /////////////////////////////////////////////////////////////////////////////////
 
 //return an array of engine
