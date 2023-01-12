@@ -169,15 +169,15 @@ test("check that engine size can show certain cars cars", () => {
         
         });
 
-    // test("check that cost of specific car can show", () => {
+    test("check that cost of specific car can show", () => {
 
-    //     let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "3L V8"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "3L V8")])
+        let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "3L V8"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 12313131200, "3L V8")])
         
-    //         actual = dealerWheels.findAllcarByEngineSpecific(100).length ;
-    //         expected =3;
-    //         expect(actual).toStrictEqual(expected);
+            actual = dealerWheels.findAllcarByCostSpecific(1231231312).length ;
+            expected =1;
+            expect(actual).toStrictEqual(expected);
         
-    //     });
+        });
 
 test("check that manufacutring names shown no cars in stack", () => {
 

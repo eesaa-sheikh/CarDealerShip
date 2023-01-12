@@ -102,7 +102,13 @@ CarDealership.prototype.findAllcarByEngineSpecific = function (inputEngine)  {
 
   /////////////////////////////////////////////////////////////////////////////
 
+/////////////////////////////////////////////////////////////////////////////////
 
+
+//find cars by specific manufacturer
+CarDealership.prototype.findAllcarByCostSpecific = function (inputCost)  {
+    return this.inStock.filter(inStock => inStock.inputCost == inputCost );
+  };
 
 
 //finds the total car Value
