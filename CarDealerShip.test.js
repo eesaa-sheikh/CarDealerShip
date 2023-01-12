@@ -126,19 +126,40 @@ test("return an acs array of cars by price", () => {
         
             expect(actual).toStrictEqual(expected);
         
-        });
-
+        })
+        
+//Test returns an array with the specified car but it seems to not work even though i tried to add in a car object
 test("check that manufacturing names can show all cars", () => {
 
 let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
 
-     actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti").length; ;
+    actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti") ;
     expected = 2;
     expect(actual).toStrictEqual(expected);
 
 });
 
+test("check that  counted  specified search of car", () => {
 
+    let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
+    
+         actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti").length ;
+        expected = 2;
+        expect(actual).toStrictEqual(expected);
+    
+    });
+
+    test("check that non specifed  names returns empty", () => {
+
+        let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
+        
+             actual = dealerWheels.findAllcarByManufacturerSpecific("porsche") ;
+            expected = [];
+            expect(actual).toStrictEqual(expected);
+        
+        });
+        
+    
 test("check that engine size can show certain cars cars", () => {
 
     let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "3L V8"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "3L V8")])
