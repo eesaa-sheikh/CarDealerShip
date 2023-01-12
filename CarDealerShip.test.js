@@ -128,13 +128,13 @@ test("return an acs array of cars by price", () => {
         
         })
         
-//Test returns an array with the specified car but it seems to not work even though i tried to add in a car object
+//Test returns an array with the specified car but it seems to not work even though i tried to add in a car object in the expected
 test("check that manufacturing names can show all cars", () => {
 
 let dealerWheels = new CarDealerShip("Eesaa's dealer Wheels", 5, [new Car("Toyota", 100, "3L V8"),new Car("Bugatti", 100, "10L W16"),new Car("Bugatti", 1231231312, "100L W16"),new Car("Lamborghini", 100, "8L V10")])
 
     actual = dealerWheels.findAllcarByManufacturerSpecific("Bugatti") ;
-    expected = 2;
+    expected = dealerWheels.carsInStock[{"inputCost": 100, "inputEngine": "10L W16", "inputName": "Bugatti"}, {"inputCost": 1231231312, "inputEngine": "100L W16", "inputName": "Bugatti"}];
     expect(actual).toStrictEqual(expected);
 
 });
