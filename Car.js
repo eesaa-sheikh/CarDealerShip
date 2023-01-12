@@ -5,5 +5,5 @@ const Car = function(inputName, inputCost,inputEngine){
         this.inputEngine= inputEngine;
 
     };
-        
+
         module.exports = Car;
