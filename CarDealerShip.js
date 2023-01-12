@@ -49,20 +49,20 @@ CarDealership.prototype.addCarToCarDealership = function (car){
 return this.inStock.push(car);
     }
 
-//     //Delete a car to stock
+//     //Delete a car from stock
 CarDealership.prototype.deleteCarToCarDealership = function (car){
     return this.inStock.length-this.inStock.splice(car,1).length ;
      
         }
 
-    //Delete a car to stock
-    CarDealership.prototype.deleteCarFromCarDealership = function (car){
-     //   for (i =0; i< this.inStock.length; i++){
-    delete this.inStock[i].length- this.inStock.length
-        return this.inStock.length;
-       // }
+    // //Delete a car to stock
+    // CarDealership.prototype.deleteCarFromCarDealership = function (car){
+    //  //   for (i =0; i< this.inStock.length; i++){
+    // delete this.inStock[i].length- this.inStock.length
+    //     return this.inStock.length;
+    //    // }
          
-            }
+    //         }
 
 //return an array of manufacturers
 CarDealership.prototype.arrayOfManufacturers = function(){
@@ -118,6 +118,7 @@ const initCarValue = 0;
 
 return priceOfCar.reduce((accumlator,currentValue)=> accumlator + currentValue, initCarValue);
 }
+
 
 
 
